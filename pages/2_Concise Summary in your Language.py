@@ -172,7 +172,7 @@ input=st.text_input("Input Prompt: ",key="input")
 target_language = st.selectbox("Select target language:", languages)
 translate = st.button('Submit')
 if translate:
-    response1=get_gemini_response(f'Please provide a clear and concise summary of the following speech:\n TEXT: {input}')
+    response1=get_gemini_response(f'Please provide a clear and concise summary of the response for following query:\n TEXT: {input}')
     st.subheader(f'The Response is {target_language} is :')
     source_text = response1
     translator = Translator()

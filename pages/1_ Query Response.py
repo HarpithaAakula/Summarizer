@@ -73,7 +73,7 @@ submit=st.button("Search for Query")
 
 if submit:
     if uploaded_file is None:
-        response=get_gemini_response(f'Please provide a short and concise summary of the following speech:\n TEXT: {input}')
+        response=get_gemini_response(f'Please provide a short and concise summary of the response for following query\n TEXT: {input}')
         # if lan!="":
         #     summary = text_summarization(response,lan)
         # else:
@@ -82,7 +82,7 @@ if submit:
         st.subheader("The Response is")
         st.write(response)
     else:
-        response1=get_gemini_response1(f'Please provide a short and concise summary of the following speech:\n TEXT: {input}',image)
+        response1=get_gemini_response1(f'Please provide a short and concise summary of the response for following query:\n TEXT: {input}',image)
         # if lan!="":
         #     summary1 = text_summarization(response1,lan)
         # else:
